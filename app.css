@@ -1,0 +1,121 @@
+
+* {
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: #222;
+	font-family: sans-serif;
+	color: #eee;
+}
+
+.scanner {
+	height: 35svh;
+	overflow: hidden;
+}
+
+#camera {
+	position: relative;
+	top: -25vh;
+	z-index: -2;
+}
+
+#overlay {
+	position: absolute;
+	top: -25vh;
+	z-index: -1;
+}
+
+.main {
+	height: 60svh;
+	width: 100svw;
+	display: flex;
+}
+
+.data {
+	width: 50svw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	row-gap: 2vh;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.toolbar {
+	width: 50svw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	row-gap: 4vh;
+}
+
+.data > #free-input {
+	position: absolute;
+	top: 36svh;	
+	font: 1.5em sans-serif;
+	width: 47vw;
+	text-align: center;
+}
+
+.data > #list {
+	
+	list-style: none;
+	font: 1.5em sans-serif;
+}
+
+.data > #list > li {
+	padding: 3px;
+}
+
+
+.toolbar > #camera-select {
+	position: absolute;
+	top: 36svh;
+	font: 1.5em sans-serif;
+	width: 47vw;
+}
+
+.toolbar > .dummy {
+	visibility: hidden;
+}
+
+.toolbar > #capture-button {
+	font: 1.5em sans-serif;
+	padding: 1vh 0 1vh;
+	width: 47vw;
+}
+
+.toolbar > #download-button {
+	font: 1.5em sans-serif;
+	padding: 1vh 0 1vh;
+	width: 47vw;
+}
+
+.footer {
+	background-color: #222;
+	width: 100svw;
+	text-align: center;
+	font-size: 1em;
+	height: 5svh;
+}
+
+.barcode-polygon {
+	fill: none;
+	stroke: purple;
+	stroke-width: 3;
+}
+
+.barcode-rect {
+	fill: white;
+}
+
+.barcode-text {
+	fill: purple;
+	font-size: 1.5em;
+}

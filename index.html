@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Barcode Detector</title>
+	<link rel="stylesheet" type="text/css" href="app.css"/>
+</head>
+<body>
+	<div class="scanner">
+		<video id="camera" muted autoplay="autoplay" playsinline="playsinline" webkit-playsinline></video>
+		<svg id="overlay"></svg>
+	</div>
+	<div class="main">
+		<div class="data">
+			<input id="free-input" type="text" inputmode="decimal" />
+			<ol id="list">
+				<li>...</li>
+			</ol>
+		</div>
+		<div class="toolbar">
+			<select id="camera-select"></select>
+			<div class="dummy"></div>
+			<button id="capture-button">Capture</button>
+			<button id="download-button">Download</button>
+		</div>
+	</div>
+	<div class="footer"><i>Developed by Nicolas Boulenc</i></div>
+	<script src="app.js"></script>
+</body>
+</html>
