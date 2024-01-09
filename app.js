@@ -39,7 +39,7 @@ async function init() {
 	}
 	else {
 		console.log('Barcode Detector is not supported by this browser, using the Dynamsoft Barcode Reader polyfill.')
-		window.BarcodeDetector = BarcodeDetectorPolyfill
+		// window.BarcodeDetector = BarcodeDetectorPolyfill
   	}
   
 	barcode_detector = new window.BarcodeDetector()
@@ -173,6 +173,7 @@ function play(device_id) {
 		camera.srcObject = stream
 		console.log(camera.videoWidth, camera.videoHeight)
 	}).catch((err) => {
+		document.querySelector(".footer").innerHTML = `getUserMediaError, ${err}, ${err.stack}`
 		console.error('getUserMediaError', err, err.stack)
 	});
 }
